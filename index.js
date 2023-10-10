@@ -25,6 +25,9 @@ app.listen(port, () => {
     console.log(`Server is running on port ${port}`)
 })
 
+app.get("/", (req, res) => {
+    return res.send("Hello world")
+})
 
 app.post("/register", async (req, res) => {
     console.log(req.body)
